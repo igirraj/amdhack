@@ -1,0 +1,41 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    /* Space Grotesk looks very brutalist/retro */
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    /* Subtle dot pattern background for neobrutalism aesthetic */
+    background-image: radial-gradient(#000 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Base button animations for neobrutalism */
+.neo-btn {
+    @apply border-2 border-black shadow-neo active:shadow-none active:translate-x-[4px] active:translate-y-[4px] transition-all bg-white font-bold text-black;
+}
+
+.neo-card {
+    @apply border-2 border-black shadow-neo bg-white;
+}
+
+.active hr {
+    @apply block border-black border-2;
+}
+
+::-webkit-scrollbar {
+    @apply hidden;
+}
+
+@media (max-width: 740px) {
+    .active p {
+        @apply bg-black text-white px-3 py-1 border-2 border-black shadow-neo;
+    }
+}
